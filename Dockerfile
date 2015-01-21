@@ -22,4 +22,5 @@ ENV RABBITMQ_MNESIA_BASE /data/mnesia
 VOLUME ["/data/log", "/data/mnesia"]
 ADD files/supervisord.conf /etc/supervisor/conf.d/rabbitmq.conf
 EXPOSE 5672 15672 15674
-CMD ["/usr/bin/supervisord"]
+
+CMD ["/usr/local/bin/supervisord"]
