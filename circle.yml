@@ -6,5 +6,5 @@ dependencies:
     - docker build -t rabbitmq .
 test:
   override:
-    - docker run -d -p 5673:5672 -p 15673:15672 -p 1883:1883 -p 8883:8883 -e RABBITMQ_PASS="mypass" rabbitmq; sleep 20
+    - docker run; sleep 20
     - curl -i --user guest:guest http://localhost:15673/api/vhosts | grep "200 OK"
